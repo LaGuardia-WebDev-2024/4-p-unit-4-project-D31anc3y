@@ -1,4 +1,4 @@
-<!--
+<!-- Unit 4 Project
 Requirements
 [  ] Google Font OR Uploaded Font
 [  ] font-size OR font-style 
@@ -11,20 +11,316 @@ Select ONE Additional Feature to Add
 [ no ] Feature 3 - Use width and margin CSS Properties
 [ no ] Feature 4 - Include at least one more additional HTML page
 -->
+<!-- Unit 5 Project
+Requirements
+[  ] <div> and <span>
+[  ] height: and width: yes 
+[  ] margin: and padding: yes
+[  ] Three Images yes 
+
+Select ONE Additional Feature to Add  
+[ no ] Feature 1 - Flexbox
+[ no ] Feature 2 - Flip Card
+[ no ] Feature 3 - Navbar
+[ no ] Feature 4 - Shaking Animation
+[ no ] Feature 5 - Gradient Background
+[ no ] Feature 6 - Spotify Playlist
+-->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <title>Delancey's favorite musicals</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      header {
+        background: linear-gradient(90deg, #ffd9d9, #fd7acf);
+        color: #fff;
+        text-align: center;
+        padding: 2em;
+      }
+      h1 {
+        font-size: 3em;
+        margin: 0;
+      }
+      nav {
+        background-color: #ffd9d9;
+        padding: 1em;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 1em;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      main {
+        max-width: 1200px;
+        margin: 2em auto;
+        padding: 0 2em;
+      }
+      .musical-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2em;
+      }
+      .musical-card {
+        background-color: #ffd9d9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      .musical-card:hover {
+        transform: translateY(-5px);
+      }
+      .musical-card img {
+        width: 100%;
+        height: auto; /* Adjusts height based on image aspect ratio */
+      }
+      .musical-info {
+        padding: 1.5em;
+      }
+      .musical-info h3 {
+        margin-top: 0;
+        color: #fd7acf; /* Color for musical titles */
+      }
+      .musical-info p {
+        font-size: 0.9em; /* Smaller font for descriptions */
+      }
+      .musical-info a {
+        display: inline-block;
+        background-color: #fd7acf; /* Button color */
+        color: #fff; /* Button text color */
+        padding: 0.5em 1em; /* Button padding */
+        text-decoration: none; /* No underline */
+        border-radius: 5px; /* Rounded corners */
+        margin-top: 1em; /* Space above button */
+      }
+      footer {
+        background-color: #6a5acd; /* Footer background color */
+        color: #fff; /* Footer text color */
+        text-align: center; /* Centered footer text */
+        padding: 1em; /* Padding for footer */
+      }
+      .lala{color:red}
+    </style> 
+  </head>
+  <body>
+    <header>
+      <h1>Delancey's favorite musicals</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#musicals">Musicals</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="musicals">
+        <h2>Featured Musicals</h2>
+        <div class="musical-grid">
+          <div class="musical-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61ov2yBvtnL._AC_UF894,1000_QL80_.jpg"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Falsettos</h3>
+              <p>
+                The story centers on Marvin, who has left his wife to be with a
+                male lover, Whizzer, and struggles to keep his family together.
+                Much of the first act explores the impact his relationship with
+                Whizzer has had on his family. The second act explores family
+                dynamics that evolve as he and his ex-wife plan his son's bar
+                mitzvah, which is complicated as Whizzer comes down with an
+                early case of AIDS. Central to the musical are the themes of
+                Jewish identity, gender roles, and gay life in the late 1970s
+                and early 1980s
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Falsettos">Learn More</a>
+            </div>
+          </div>
+          <div class="musical-card">
+            <img
+              src="https://www.broadwaysd.com/wp-content/uploads/2020/09/hairspray-main-1.webp"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Hairspray</h3>
+              <p>
+                It's 1962 in Baltimore, Maryland, and quirky, plus-sized,
+                teenage Tracy Turnblad has one dream: to dance on the “Corny
+                Collins Show”. When she gets put in detention with the
+                African-American students in the school, they teach her some of
+                their dance moves, and her new found groove wins her a spot on
+                Corny's show
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Hairspray_(musical)"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="musical-card">
+            <img
+              src="https://www.broadwaymerchandiseshop.com/cdn/shop/products/ChicagoTheMusicalLPcoverart_1445x.jpg?v=1671231105"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Chicago</h3>
+              <p>
+                Set in the 1920s and based on real events, this satirical show
+                follows wannabe jazz age stars who get their fame not just for
+                their singing or dancing talent, but for committing murders that
+                make sensationalized headlines all across the city of Chicago.
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Chicago_(musical)"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="musical-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71iZLrkVhDL.jpg"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Hamilton</h3>
+              <p>
+                HAMILTON is the epic saga that follows the rise of Founding
+                Father Alexander Hamilton as he fights for honour, love, and a
+                legacy that would shape the course of a nation
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Hamilton_(musical)"
+                >Learn More</a
+              >
+            </div>
+          </div>
 
-<head>
-  <title>Unit 4 Project</title>
-  <meta charset="utf-8">
-  <style>
+          <div class="musical-card">
+            <img
+              src="https://www.theatricalindex.com/media_cache/media/subshows/little-shop-of-horrors/little-shop-of-horrors-westside-2019/poster_transparent/logo.jpg"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Little Shop of Horrors</h3>
+              <p>
+                A hapless florist shop worker who raises a plant that feeds on
+                human blood and flesh
+              </p>
+              <a
+                href="https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(musical)#:~:text=The%20story%20follows%20a%20hapless,on%20human%20blood%20and%20flesh."
+                >Learn More</a
+              >
+            </div>
+          </div>
 
-  </style>
-</head>
-<body>
+          <div class="musical-card">
+            <img
+              src="https://s3.amazonaws.com/criterion-production/films/9dd3b0219b35c500b43dfb402e4b8dac/MLWMwOFoSkDEEKN7hDEOPvjkU2SHNx_large.jpg"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Funny Girl</h3>
+              <p>
+                The semi-biographical plot is based on the life and career of
+                comedian and Broadway star Fanny Brice, featuring her stormy
+                relationship with entrepreneur and gambler Nicky Arnstein.
+                Barbra Streisand starred in the original Broadway musical,
+                produced by Brice's son-in-law Ray Stark.
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Funny_Girl_(musical)"
+                >Learn More</a
+              >
+            </div>
+          </div>
 
- 
+          <div class="musical-card">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/60240c23ff9621097d21b032/fc98e28d-98be-4bc8-9769-442bb537ef78/Grease+Cast+Photo.png?format=2500w"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Grease</h3>
+              <p>
+                <span class="lala"> Grease </span>is a 1971 musical by Jim Jacobs and Warren Casey. Named
+                after the 1950s United States working-class youth subculture
+                known as greasers, the musical is set in 1959 at fictional
+                Rydell High School (based on William Howard Taft School in
+                Chicago, Illinois) and follows 10 working-class teenagers as
+                they navigate the complexities of peer pressure, politics,
+                personal core values, and love. The score borrows heavily from
+                the sounds of early rock and roll. In its original production in
+                Chicago, Grease was a raunchy, raw, aggressive, vulgar show.
+                Subsequent productions sanitized it and toned it down
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Grease_(musical)"
+                >Learn More</a
+              >
+            </div>
+          </div>
 
-</body>
+          <div class="musical-card">
+            <img
+              src="https://juilliardstore.com/cdn/shop/products/00313446-wl.jpg?v=1600123429"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Into the Woods</h3>
+              <p>
+                a musical by Stephen Sondheim and James Lapine that intertwines
+                classic fairy tale characters like Cinderella, Little Red Riding
+                Hood, Jack and the Beanstalk, and a childless baker, as they all
+                journey into the woods to fulfill their deepest wishes,
+                ultimately confronting the consequences of their actions and
+                exploring the complexities of "happily ever after" with a dark
+                and humorous twist
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Into_the_Woods"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <div class="musical-card">
+            <img
+              src="https://d1md8edy3s7xes.cloudfront.net/images/shows/sweeney-todd-1-400x400"
+              alt="Musical Title"
+            />
+            <div class="musical-info">
+              <h3>Sweeney Todd</h3>
+              <p>
+                "Sweeney Todd: The Demon Barber of Fleet Street" is a dark
+                musical thriller set in 19th century London, where a wrongly
+                imprisoned barber named Sweeney Todd returns to seek revenge
+                against a corrupt judge who destroyed his life, using his
+                barbershop to murder customers with the help of a pie shop
+                owner, Mrs. Lovett, who then uses the bodies as ingredients for
+                her popular meat pies
+              </p>
+              <a
+                href="https://en.wikipedia.org/wiki/Sweeney_Todd:_The_Demon_Barber_of_Fleet_Street"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
